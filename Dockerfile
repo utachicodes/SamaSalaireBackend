@@ -1,0 +1,31 @@
+# ── Build stage ──────────────────────────────────────────────────────────────
+FROM golang:1.26-alpine AS builder
+
+WORKDIR /app
+
+# Download deps first so this layer is cached unless go.mod/go.sum change
+COPY go.mod go.sum ./
+RUN go mod download
+
+COPY . .
+
+RUN CGO_ENABLED=0 GOOS=linux go build -trimpath -ldflags="-s -w" -o server ./cmd/server/main.go
+
+# ── Runtime stage ─────────────────────────────────────────────────────────────
+FROM alpine:3.21
+
+RUN apk --no-cache add ca-certificates tzdata
+
+WORKDIR /app
+
+COPY --from=builder /app/server .
+
+EXPOSE 8080
+
+ENV PORT=8080 \
+    MONGODB_URI=mongodb://mongo:27017 \
+    DB_NAME=samasalaire \
+    JWT_SECRET=change-me-in-production \
+    JWT_EXPIRY_HOURS=24
+
+ENTRYPOINT ["./server"]
