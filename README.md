@@ -357,4 +357,4 @@ Found a vulnerability? Please do **not** open a public issue. See [SECURITY.md](
 
 ## License
 
-Released under the [MIT License](LICENSE).
+Released under the [MIT License](LICENSE) — © 2026 SamaSalaire contributors.
