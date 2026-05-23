@@ -18,7 +18,7 @@ func main() {
 
 	r := router.New(db)
 
-	log.Printf("Server starting on port %s", cfg.Port)
+	log.Printf("HTTP server listening on :%s", cfg.Port)
 	if err := r.Run(":" + cfg.Port); err != nil {
 		log.Fatalf("Failed to start server: %v", err)
 	}
