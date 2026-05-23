@@ -218,7 +218,7 @@ func (h *LeaveHandler) DecideRequest(c *gin.Context) {
 		return
 	}
 	if req.Status != "pending" {
-		RespondError(c, http.StatusBadRequest, "request is not pending")
+		RespondError(c, http.StatusBadRequest, "leave request has already been decided")
 		return
 	}
 
