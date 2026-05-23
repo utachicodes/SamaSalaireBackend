@@ -1,3 +1,15 @@
 .git
-.env
+.gitignore
+.github
+.vscode
+.idea
 *.md
+!README.md
+.env
+.env.*
+coverage.out
+coverage.html
+/bin
+/dist
+Dockerfile
+.dockerignore
