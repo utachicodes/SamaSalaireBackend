@@ -95,7 +95,7 @@ func (h *PayrollHandler) FinalizePeriod(c *gin.Context) {
 		bson.M{"$set": bson.M{"status": "closed"}},
 	)
 	if err != nil || result.MatchedCount == 0 {
-		RespondError(c, http.StatusBadRequest, "period not found or already closed")
+		RespondError(c, http.StatusBadRequest, "payroll period not found or already finalized")
 		return
 	}
 	RespondOK(c, gin.H{"message": "payroll period finalized"})
