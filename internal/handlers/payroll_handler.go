@@ -65,7 +65,7 @@ func (h *PayrollHandler) CreatePeriod(c *gin.Context) {
 func (h *PayrollHandler) RunPayroll(c *gin.Context) {
 	id, err := bson.ObjectIDFromHex(c.Param("id"))
 	if err != nil {
-		RespondError(c, http.StatusBadRequest, "invalid id")
+		RespondError(c, http.StatusBadRequest, "invalid payroll period id")
 		return
 	}
 
