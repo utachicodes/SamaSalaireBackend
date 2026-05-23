@@ -28,6 +28,6 @@ func createUniqueIndex(ctx context.Context, col *mongo.Collection, keys bson.D) 
 		Options: options.Index().SetUnique(true),
 	})
 	if err != nil {
-		log.Printf("Warning: could not create index on %s: %v", col.Name(), err)
+		log.Printf("mongo: could not create unique index on %s: %v", col.Name(), err)
 	}
 }
