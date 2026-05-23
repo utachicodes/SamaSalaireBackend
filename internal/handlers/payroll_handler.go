@@ -135,7 +135,7 @@ func (h *PayrollHandler) ListPayslips(c *gin.Context) {
 func (h *PayrollHandler) GetPayslip(c *gin.Context) {
 	id, err := bson.ObjectIDFromHex(c.Param("id"))
 	if err != nil {
-		RespondError(c, http.StatusBadRequest, "invalid id")
+		RespondError(c, http.StatusBadRequest, "invalid payslip id")
 		return
 	}
 
