@@ -184,11 +184,17 @@ Authorization: Bearer <token>
 POST /api/auth/login
 Content-Type: application/json
 
-{ "email": "admin@example.com", "password": "admin123" }
+{ "username": "admin", "password": "admin123" }
 ```
 
 ```json
-{ "token": "<jwt>", "user": { "id": "...", "role": "admin", "email": "admin@example.com" } }
+{
+  "data": {
+    "token": "<jwt>",
+    "user": { "id": "...", "role": "admin", "username": "admin", "employee_id": "..." }
+  },
+  "error": null
+}
 ```
 
 </details>
