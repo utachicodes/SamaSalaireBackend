@@ -171,7 +171,7 @@ func (h *LeaveHandler) CreateRequest(c *gin.Context) {
 		var lt models.LeaveType
 		h.db.Collection(database.ColLeaveTypes).FindOne(ctx, bson.M{"_id": req.LeaveTypeID}).Decode(&lt)
 		if !lt.AllowsNegative && balance.RemainingDays < days {
-			RespondError(c, http.StatusBadRequest, "insufficient leave balance")
+			RespondError(c, http.StatusBadRequest, "insufficient leave balance for the requested period")
 			return
 		}
 	}
