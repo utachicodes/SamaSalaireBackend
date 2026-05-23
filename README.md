@@ -27,6 +27,7 @@ SamaSalaire is a REST API for managing employee payroll, leave, and HR operation
 - [Getting Started](#getting-started)
 - [Configuration](#configuration)
 - [API Reference](#api-reference)
+- [Error Responses](#error-responses)
 - [Roles and Permissions](#roles-and-permissions)
 - [Docker](#docker)
 - [Testing](#testing)
@@ -228,6 +229,25 @@ GET /health  →  {"status":"ok"}
 ```
 
 Use this endpoint for liveness probes — it does not touch the database.
+
+---
+
+## Error Responses
+
+All error responses use a consistent JSON shape:
+
+```json
+{ "error": "human-readable description" }
+```
+
+Common HTTP statuses:
+
+- `400` — invalid request body or query parameters
+- `401` — missing or invalid `Authorization` header
+- `403` — authenticated but lacks the required role
+- `404` — resource not found
+- `409` — conflict (e.g. duplicate email)
+- `500` — internal server error
 
 ---
 
