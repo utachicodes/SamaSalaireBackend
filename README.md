@@ -236,9 +236,9 @@ Use this endpoint for liveness probes — it does not touch the database.
 | Role       | Capabilities                                                                |
 |------------|-----------------------------------------------------------------------------|
 | `admin`    | Full access. User management, leave type configuration, all HR operations.  |
-| `hr`       | Manage employees, salary components, payroll lifecycle, and leave.          |
-| `manager`  | View employee directory, approve or reject leave requests.                  |
-| `employee` | View own payslips and leave balance, submit leave requests.                 |
+| `hr`       | Manage employees, salary components, payroll lifecycle, and leave types.    |
+| `manager`  | View the employee directory and approve or reject leave requests.           |
+| `employee` | View own payslips and leave balance; submit leave requests.                 |
 
 ---
 
