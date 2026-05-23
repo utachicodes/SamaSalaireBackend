@@ -75,14 +75,15 @@ SamaSalaire is a REST API for managing employee payroll, leave, and HR operation
 ├── cmd/
 │   ├── server/          # Application entry point
 │   └── seed/            # Database seeder (development)
-└── internal/
-    ├── config/          # Environment variable loading
-    ├── database/        # MongoDB connection, indexes, collection names
-    ├── handlers/        # HTTP handlers, one file per domain
-    ├── middleware/      # Auth, RBAC, CORS, audit logging
-    ├── models/          # BSON/JSON data models
-    ├── router/          # Route registration
-    └── services/        # Business logic (payroll engine)
+├── internal/
+│   ├── config/          # Environment variable loading
+│   ├── database/        # MongoDB connection, indexes, collection names
+│   ├── handlers/        # HTTP handlers, one file per domain
+│   ├── middleware/      # Auth, RBAC, CORS, audit logging
+│   ├── models/          # BSON/JSON data models
+│   ├── router/          # Route registration
+│   └── services/        # Business logic (payroll engine)
+└── Dockerfile           # Multi-stage build → Alpine runtime image
 ```
 
 ---
