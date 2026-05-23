@@ -10,11 +10,11 @@ import (
 )
 
 type Config struct {
-	Port            string
-	MongoURI        string
-	DBName          string
-	JWTSecret       string
-	JWTExpiryHours  int
+	Port           string
+	MongoURI       string
+	DBName         string
+	JWTSecret      string
+	JWTExpiryHours int
 }
 
 var (

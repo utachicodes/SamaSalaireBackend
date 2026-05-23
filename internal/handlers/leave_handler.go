@@ -126,7 +126,8 @@ func (h *LeaveHandler) ListRequests(c *gin.Context) {
 			reportIDs[i] = r.ID
 		}
 		filter["employee_id"] = bson.M{"$in": reportIDs}
-	// hr and admin see all — no filter
+	default:
+		// hr and admin see every request — no filter
 	}
 
 	if status := c.Query("status"); status != "" {
