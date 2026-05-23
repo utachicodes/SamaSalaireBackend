@@ -19,7 +19,7 @@ func CreateIndexes(db *mongo.Database) {
 	createUniqueIndex(ctx, db.Collection(ColLeaveBalances), bson.D{{Key: "employee_id", Value: 1}, {Key: "leave_type_id", Value: 1}})
 	createUniqueIndex(ctx, db.Collection(ColPayslips), bson.D{{Key: "employee_id", Value: 1}, {Key: "period_id", Value: 1}})
 
-	log.Println("Database indexes created")
+	log.Println("mongo: indexes ensured")
 }
 
 func createUniqueIndex(ctx context.Context, col *mongo.Collection, keys bson.D) {
