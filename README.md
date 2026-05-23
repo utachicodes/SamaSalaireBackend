@@ -238,11 +238,11 @@ Content-Type: application/json
 
 ### Users
 
-| Method | Endpoint        | Access | Description      |
-|--------|-----------------|--------|------------------|
-| GET    | `/users`        | admin  | List all users   |
-| POST   | `/users`        | admin  | Create a user    |
-| PUT    | `/users/:id`    | admin  | Update a user    |
+| Method | Endpoint        | Access | Description           |
+|--------|-----------------|--------|-----------------------|
+| GET    | `/users`        | admin  | List all users        |
+| POST   | `/users`        | admin  | Create a user account |
+| PUT    | `/users/:id`    | admin  | Update a user account |
 
 ### Health
 
