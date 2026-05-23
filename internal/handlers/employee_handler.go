@@ -84,7 +84,7 @@ func (h *EmployeeHandler) Create(c *gin.Context) {
 func (h *EmployeeHandler) Get(c *gin.Context) {
 	id, err := bson.ObjectIDFromHex(c.Param("id"))
 	if err != nil {
-		RespondError(c, http.StatusBadRequest, "invalid id")
+		RespondError(c, http.StatusBadRequest, "invalid employee id")
 		return
 	}
 
