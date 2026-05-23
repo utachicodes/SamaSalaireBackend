@@ -74,7 +74,10 @@ func (h *PayrollHandler) RunPayroll(c *gin.Context) {
 		RespondError(c, http.StatusBadRequest, err.Error())
 		return
 	}
-	RespondOK(c, gin.H{"payslips_generated": count})
+	RespondOK(c, gin.H{
+		"message":            "payroll run completed",
+		"payslips_generated": count,
+	})
 }
 
 func (h *PayrollHandler) FinalizePeriod(c *gin.Context) {
