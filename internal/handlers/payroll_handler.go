@@ -98,7 +98,7 @@ func (h *PayrollHandler) FinalizePeriod(c *gin.Context) {
 		RespondError(c, http.StatusBadRequest, "period not found or already closed")
 		return
 	}
-	RespondOK(c, gin.H{"message": "period finalized"})
+	RespondOK(c, gin.H{"message": "payroll period finalized"})
 }
 
 func (h *PayrollHandler) ListPayslips(c *gin.Context) {
