@@ -4,6 +4,7 @@
 
 **Production-ready payroll and HR management API**
 
+[![CI](https://img.shields.io/github/actions/workflow/status/utachicodes/SamaSalaireBackend/ci.yml?branch=main&style=flat-square&label=CI)](https://github.com/utachicodes/SamaSalaireBackend/actions/workflows/ci.yml)
 [![Go](https://img.shields.io/badge/Go-1.26-00ADD8?style=flat-square&logo=go&logoColor=white)](https://golang.org)
 [![Gin](https://img.shields.io/badge/Gin-1.12-00ADD8?style=flat-square&logo=go&logoColor=white)](https://gin-gonic.com)
 [![MongoDB](https://img.shields.io/badge/MongoDB-7.x-47A248?style=flat-square&logo=mongodb&logoColor=white)](https://mongodb.com)
