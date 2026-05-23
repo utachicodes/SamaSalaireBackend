@@ -33,7 +33,7 @@ type loginRequest struct {
 func (h *AuthHandler) Login(c *gin.Context) {
 	var req loginRequest
 	if err := c.ShouldBindJSON(&req); err != nil {
-		RespondError(c, http.StatusBadRequest, "username and password are required")
+		RespondError(c, http.StatusBadRequest, "username and password must be provided")
 		return
 	}
 
