@@ -24,7 +24,7 @@ func Connect(cfg *config.Config) *mongo.Client {
 		log.Fatalf("mongo: ping failed: %v", err)
 	}
 
-	log.Println("Connected to MongoDB successfully")
+	log.Println("mongo: connected")
 	return client
 }
 
