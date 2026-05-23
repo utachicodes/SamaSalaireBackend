@@ -29,6 +29,7 @@ SamaSalaire is a REST API for managing employee payroll, leave, and HR operation
 - [API Reference](#api-reference)
 - [Roles and Permissions](#roles-and-permissions)
 - [Docker](#docker)
+- [Testing](#testing)
 - [Seeding](#seeding)
 - [Contributing](#contributing)
 - [Security](#security)
@@ -252,6 +253,16 @@ docker run --rm -p 8080:8080 \
 ```
 
 The multi-stage build keeps the final image small — only the compiled binary and CA certificates are included in the runtime layer. The image runs as a non-root user by default.
+
+---
+
+## Testing
+
+```bash
+make test
+```
+
+Runs `go test ./... -race -count=1`. Disable the race detector on platforms where it is unavailable by overriding the `test` target.
 
 ---
 
