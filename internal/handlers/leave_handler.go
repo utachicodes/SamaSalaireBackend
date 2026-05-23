@@ -201,7 +201,7 @@ func (h *LeaveHandler) DecideRequest(c *gin.Context) {
 		return
 	}
 	if body.Status != "approved" && body.Status != "rejected" {
-		RespondError(c, http.StatusBadRequest, "status must be approved or rejected")
+		RespondError(c, http.StatusBadRequest, "status must be either 'approved' or 'rejected'")
 		return
 	}
 
