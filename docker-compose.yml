@@ -1,0 +1,31 @@
+services:
+  mongo:
+    image: mongo:7
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+    healthcheck:
+      test: ["CMD", "mongosh", "--quiet", "--eval", "db.runCommand('ping').ok"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  api:
+    build: .
+    restart: unless-stopped
+    depends_on:
+      mongo:
+        condition: service_healthy
+    environment:
+      PORT: "8080"
+      MONGODB_URI: mongodb://mongo:27017
+      DB_NAME: samasalaire
+      JWT_SECRET: ${JWT_SECRET:-change-me-in-prod}
+      JWT_EXPIRY_HOURS: "24"
+    ports:
+      - "8080:8080"
+
+volumes:
+  mongo-data:
