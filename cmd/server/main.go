@@ -20,6 +20,6 @@ func main() {
 
 	log.Printf("HTTP server listening on :%s", cfg.Port)
 	if err := r.Run(":" + cfg.Port); err != nil {
-		log.Fatalf("Failed to start server: %v", err)
+		log.Fatalf("HTTP server exited unexpectedly: %v", err)
 	}
 }
