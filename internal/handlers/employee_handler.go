@@ -130,7 +130,7 @@ func (h *EmployeeHandler) Update(c *gin.Context) {
 func (h *EmployeeHandler) Delete(c *gin.Context) {
 	id, err := bson.ObjectIDFromHex(c.Param("id"))
 	if err != nil {
-		RespondError(c, http.StatusBadRequest, "invalid id")
+		RespondError(c, http.StatusBadRequest, "invalid employee id")
 		return
 	}
 
