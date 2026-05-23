@@ -96,7 +96,13 @@ cp .env.example .env
 # edit .env with your values
 
 go mod download
-go run ./cmd/server/main.go
+go run ./cmd/server
+```
+
+Or, with the Makefile:
+
+```bash
+make run
 ```
 
 The API starts at `http://localhost:8080`.
