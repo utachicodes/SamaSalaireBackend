@@ -200,6 +200,8 @@ Content-Type: application/json
 
 ### Salary Components
 
+Each employee can have any number of recurring earnings or deductions (basic pay, transport allowance, tax, etc.).
+
 | Method | Endpoint                            | Access     | Description                     |
 |--------|-------------------------------------|------------|---------------------------------|
 | GET    | `/salary-components/:employeeId`    | admin, hr  | List components for an employee |
