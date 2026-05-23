@@ -151,6 +151,6 @@ func salaryComp(employeeID bson.ObjectID, name, compType string, amount float64)
 
 func insertMany(ctx context.Context, col *mongo.Collection, docs []interface{}) {
 	if _, err := col.InsertMany(ctx, docs); err != nil {
-		log.Printf("InsertMany error on %s: %v", col.Name(), err)
+		log.Printf("seed: InsertMany on %s failed: %v", col.Name(), err)
 	}
 }
