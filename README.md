@@ -39,6 +39,7 @@ SamaSalaire is a REST API for managing employee payroll, leave, and HR operation
 
 ## Features
 
+- REST API designed around resource-oriented routes
 - JWT authentication with configurable token expiry
 - Role-based access control — `admin`, `hr`, `manager`, `employee`
 - Employee management with department and reporting hierarchy
