@@ -121,7 +121,7 @@ curl http://localhost:8080/health
 | `PORT`             | `8080`                        | Port the HTTP server listens on     |
 | `MONGODB_URI`      | `mongodb://localhost:27017`   | MongoDB connection string           |
 | `DB_NAME`          | `samasalaire`                 | MongoDB database name               |
-| `JWT_SECRET`       | —                             | Secret used to sign JWTs            |
+| `JWT_SECRET`       | `change-me` *(insecure)*      | Secret used to sign JWTs            |
 | `JWT_EXPIRY_HOURS` | `24`                          | Token lifetime in hours             |
 
 ---
