@@ -2,7 +2,7 @@
 
 # SamaSalaire Backend
 
-**Production-ready payroll and HR management API**
+**Payroll, leave, and HR management REST API — production-ready in Go**
 
 [![CI](https://img.shields.io/github/actions/workflow/status/utachicodes/SamaSalaireBackend/ci.yml?branch=main&style=flat-square&label=CI)](https://github.com/utachicodes/SamaSalaireBackend/actions/workflows/ci.yml)
 [![Go](https://img.shields.io/badge/Go-1.26-00ADD8?style=flat-square&logo=go&logoColor=white)](https://golang.org)
