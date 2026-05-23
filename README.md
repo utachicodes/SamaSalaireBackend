@@ -280,7 +280,7 @@ Or:
 make seed
 ```
 
-This creates a set of employees across all four roles along with salary components and leave types.
+This creates a set of employees across all four roles along with salary components and leave types. Re-running the seeder is idempotent: existing accounts are skipped rather than duplicated.
 
 ---
 
