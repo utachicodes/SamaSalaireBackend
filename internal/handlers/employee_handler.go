@@ -142,5 +142,5 @@ func (h *EmployeeHandler) Delete(c *gin.Context) {
 		RespondError(c, http.StatusNotFound, "employee not found")
 		return
 	}
-	RespondOK(c, gin.H{"message": "employee deactivated"})
+	RespondOK(c, gin.H{"message": "employee deactivated (soft delete)"})
 }
