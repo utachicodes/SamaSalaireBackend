@@ -101,8 +101,8 @@ func main() {
 	}
 	insertMany(ctx, db.Collection(database.ColLeaveBalances), balances)
 
-	log.Println("Seed complete!")
-	log.Println("Test credentials:")
+	log.Println("seed: complete")
+	log.Println("seed: test credentials —")
 	log.Println("  admin / admin123")
 	log.Println("  hr    / hr123")
 	log.Println("  manager / manager123")
