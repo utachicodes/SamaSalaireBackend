@@ -144,6 +144,22 @@ Authorization: Bearer <token>
 | POST   | `/auth/login`     | Public | Obtain a JWT        |
 | POST   | `/auth/logout`    | Auth   | Invalidate session  |
 
+<details>
+<summary>Example: login</summary>
+
+```http
+POST /api/auth/login
+Content-Type: application/json
+
+{ "email": "admin@example.com", "password": "admin123" }
+```
+
+```json
+{ "token": "<jwt>", "user": { "id": "...", "role": "admin", "email": "admin@example.com" } }
+```
+
+</details>
+
 ### Employees
 
 | Method | Endpoint           | Access                  | Description         |
