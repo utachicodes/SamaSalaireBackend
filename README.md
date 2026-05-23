@@ -211,6 +211,8 @@ Each employee can have any number of recurring earnings or deductions (basic pay
 
 ### Payroll
 
+A payroll period progresses through three states: `draft` → `running` → `finalized`. Only `finalized` periods generate immutable payslips.
+
 | Method | Endpoint                          | Access     | Description                  |
 |--------|-----------------------------------|------------|------------------------------|
 | GET    | `/payroll-periods`                | admin, hr  | List payroll periods         |
