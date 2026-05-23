@@ -68,7 +68,7 @@ func (h *AuthHandler) Login(c *gin.Context) {
 	token := jwt.NewWithClaims(jwt.SigningMethodHS256, claims)
 	signed, err := token.SignedString([]byte(cfg.JWTSecret))
 	if err != nil {
-		RespondError(c, http.StatusInternalServerError, "failed to generate token")
+		RespondError(c, http.StatusInternalServerError, "could not issue authentication token")
 		return
 	}
 
