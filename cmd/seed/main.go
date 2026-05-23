@@ -128,7 +128,7 @@ func employee(name, email string, hireDate time.Time, jobTitle, dept string, man
 func user(employeeID bson.ObjectID, username, password, role string) models.User {
 	hash, err := bcrypt.GenerateFromPassword([]byte(password), bcrypt.DefaultCost)
 	if err != nil {
-		log.Fatalf("bcrypt error: %v", err)
+		log.Fatalf("seed: bcrypt failed: %v", err)
 	}
 	return models.User{
 		ID:           bson.NewObjectID(),
