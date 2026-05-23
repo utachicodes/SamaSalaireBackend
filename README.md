@@ -124,6 +124,8 @@ curl http://localhost:8080/health
 | `JWT_SECRET`       | `change-me` *(insecure)*      | Secret used to sign JWTs            |
 | `JWT_EXPIRY_HOURS` | `24`                          | Token lifetime in hours             |
 
+> Always override `JWT_SECRET` in production with a high-entropy value (at least 32 random bytes). Rotating it invalidates every existing token.
+
 ---
 
 ## API Reference
