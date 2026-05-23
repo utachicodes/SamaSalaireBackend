@@ -15,7 +15,7 @@ func RequireRole(roles ...string) gin.HandlerFunc {
 		role, _ := c.Get("role")
 		roleStr, _ := role.(string)
 		if _, ok := allowed[roleStr]; !ok {
-			c.AbortWithStatusJSON(http.StatusForbidden, gin.H{"error": "forbidden"})
+			c.AbortWithStatusJSON(http.StatusForbidden, gin.H{"error": "insufficient permissions for this resource"})
 			return
 		}
 		c.Next()
