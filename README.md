@@ -82,7 +82,7 @@ SamaSalaire is a REST API for managing employee payroll, leave, and HR operation
 
 ## Getting Started
 
-**Prerequisites:** Go 1.22+, MongoDB 6+
+**Prerequisites:** Go 1.26+, MongoDB 7+
 
 ```bash
 git clone https://github.com/utachicodes/SamaSalaireBackend.git
