@@ -84,5 +84,5 @@ func (h *AuthHandler) Login(c *gin.Context) {
 }
 
 func (h *AuthHandler) Logout(c *gin.Context) {
-	RespondOK(c, gin.H{"message": "logged out"})
+	RespondOK(c, gin.H{"message": "logged out successfully"})
 }
