@@ -64,6 +64,7 @@ SamaSalaire is a REST API for managing employee payroll, leave, and HR operation
 | Authentication  | JWT — golang-jwt/jwt v5            |
 | Configuration   | godotenv                           |
 | Containerization| Docker — Alpine 3.21 runtime       |
+| Logging         | Go standard `log` package          |
 
 ---
 
