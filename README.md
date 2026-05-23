@@ -166,10 +166,10 @@ Authorization: Bearer <token>
 
 ### Auth
 
-| Method | Endpoint          | Access | Description         |
-|--------|-------------------|--------|---------------------|
-| POST   | `/auth/login`     | Public | Obtain a JWT        |
-| POST   | `/auth/logout`    | Auth   | Invalidate session  |
+| Method | Endpoint          | Access | Description                       |
+|--------|-------------------|--------|-----------------------------------|
+| POST   | `/auth/login`     | Public | Exchange credentials for a JWT    |
+| POST   | `/auth/logout`    | Auth   | Invalidate the current session    |
 
 <details>
 <summary>Example: login</summary>
