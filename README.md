@@ -276,11 +276,13 @@ Use this endpoint for liveness probes — it does not touch the database.
 
 ## Error Responses
 
-All error responses use a consistent JSON shape:
+Every response — success or error — wraps payload and error inside one envelope:
 
 ```json
-{ "error": "human-readable description" }
+{ "data": <payload-or-null>, "error": <message-or-null> }
 ```
+
+On success, `data` is populated and `error` is `null`. On failure, `data` is `null` and `error` is a human-readable string.
 
 Common HTTP statuses:
 
