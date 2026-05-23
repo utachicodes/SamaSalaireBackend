@@ -251,7 +251,7 @@ docker run --rm -p 8080:8080 \
   samasalaire-backend
 ```
 
-The multi-stage build keeps the final image small — only the compiled binary and CA certificates are included in the runtime layer.
+The multi-stage build keeps the final image small — only the compiled binary and CA certificates are included in the runtime layer. The image runs as a non-root user by default.
 
 ---
 
