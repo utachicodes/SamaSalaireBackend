@@ -131,7 +131,7 @@ curl http://localhost:8080/health
 
 ## API Reference
 
-All routes are prefixed with `/api`. Protected routes require the header:
+All authenticated routes are prefixed with `/api`. The health endpoint is unprefixed. Protected routes require the header:
 
 ```
 Authorization: Bearer <token>
