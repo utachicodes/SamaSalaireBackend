@@ -25,6 +25,7 @@ SamaSalaire is a REST API for managing employee payroll, leave, and HR operation
 - [Tech Stack](#tech-stack)
 - [Project Structure](#project-structure)
 - [Getting Started](#getting-started)
+- [Architecture](#architecture)
 - [Configuration](#configuration)
 - [API Reference](#api-reference)
 - [Error Responses](#error-responses)
@@ -117,6 +118,27 @@ The API starts at `http://localhost:8080`. The port is configurable via the `POR
 curl http://localhost:8080/health
 # {"status":"ok"}
 ```
+
+---
+
+## Architecture
+
+```
+HTTP request
+    │
+    ▼
+┌───────────────┐    ┌──────────────┐    ┌──────────────┐
+│  middleware   │ →  │   handlers   │ →  │   services   │
+│ auth/RBAC/CORS│    │  (cmd/server)│    │ (payroll, …) │
+└───────────────┘    └──────────────┘    └──────────────┘
+                                                │
+                                                ▼
+                                         ┌──────────────┐
+                                         │   MongoDB    │
+                                         └──────────────┘
+```
+
+Handlers are kept thin — request parsing, validation, and response writing only. All business rules live in `internal/services` or in domain methods on the models.
 
 ---
 
