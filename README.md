@@ -99,7 +99,7 @@ git clone https://github.com/utachicodes/SamaSalaireBackend.git
 cd SamaSalaireBackend
 
 cp .env.example .env
-# edit .env with your values
+# edit .env with your values — at minimum, set a strong JWT_SECRET
 
 go mod download
 go run ./cmd/server
