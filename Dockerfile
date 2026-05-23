@@ -14,11 +14,14 @@ RUN CGO_ENABLED=0 GOOS=linux go build -trimpath -ldflags="-s -w" -o server ./cmd
 # ── Runtime stage ─────────────────────────────────────────────────────────────
 FROM alpine:3.21
 
-RUN apk --no-cache add ca-certificates tzdata
+RUN apk --no-cache add ca-certificates tzdata && \
+    addgroup -S app && adduser -S -G app app
 
 WORKDIR /app
 
 COPY --from=builder /app/server .
+
+USER app
 
 EXPOSE 8080
 
