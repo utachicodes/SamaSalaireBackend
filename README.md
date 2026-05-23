@@ -123,6 +123,8 @@ curl http://localhost:8080/health
 # {"status":"ok"}
 ```
 
+A non-`ok` status code means the server is not yet ready — usually because MongoDB is unreachable. Check the server logs.
+
 ---
 
 ## Architecture
