@@ -56,13 +56,13 @@ SamaSalaire is a REST API for managing employee payroll, leave, and HR operation
 
 ## Tech Stack
 
-| Layer           | Technology                         |
-|-----------------|------------------------------------|
-| Language        | Go 1.26                            |
-| HTTP Framework  | Gin 1.12                           |
-| Database        | MongoDB 7.x (mongo-driver v2)      |
-| Authentication  | JWT — golang-jwt/jwt v5            |
-| Configuration   | godotenv                           |
+| Layer            | Technology                         |
+|------------------|------------------------------------|
+| Language         | Go 1.26                            |
+| HTTP Framework   | Gin 1.12                           |
+| Database         | MongoDB 7.x (mongo-driver v2)      |
+| Authentication   | JWT — golang-jwt/jwt v5            |
+| Configuration    | godotenv                           |
 | Containerization| Docker — Alpine 3.21 runtime       |
 | Logging         | Go standard `log` package          |
 
