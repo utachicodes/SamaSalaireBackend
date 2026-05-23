@@ -287,7 +287,7 @@ Common HTTP statuses:
 ## Docker
 
 ```bash
-# Build
+# Build (multi-stage; takes ~30s on a warm cache)
 docker build -t samasalaire-backend .
 
 # Run
