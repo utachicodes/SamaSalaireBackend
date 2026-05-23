@@ -339,7 +339,9 @@ Or:
 make seed
 ```
 
-This creates a set of employees across all four roles along with salary components and leave types. Re-running the seeder is idempotent: existing accounts are skipped rather than duplicated.
+This creates a set of employees across all four roles along with salary components and leave types.
+
+> **Warning:** the seeder drops every collection before inserting fresh data. Never run it against a database you want to keep.
 
 ---
 
