@@ -46,7 +46,7 @@ func (h *PayrollHandler) CreatePeriod(c *gin.Context) {
 		return
 	}
 	if !period.StartDate.Before(period.EndDate) {
-		RespondError(c, http.StatusBadRequest, "start_date must be before end_date")
+		RespondError(c, http.StatusBadRequest, "start_date must be strictly before end_date")
 		return
 	}
 	period.ID = bson.NewObjectID()
