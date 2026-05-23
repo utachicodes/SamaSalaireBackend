@@ -223,6 +223,8 @@ Content-Type: application/json
 GET /health  →  {"status":"ok"}
 ```
 
+Use this endpoint for liveness probes — it does not touch the database.
+
 ---
 
 ## Roles and Permissions
