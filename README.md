@@ -239,7 +239,13 @@ The multi-stage build keeps the final image small — only the compiled binary a
 Populate the database with demo data for development:
 
 ```bash
-go run ./cmd/seed/main.go
+go run ./cmd/seed
+```
+
+Or:
+
+```bash
+make seed
 ```
 
 This creates a set of employees across all four roles along with salary components and leave types.
