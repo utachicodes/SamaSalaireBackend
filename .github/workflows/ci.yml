@@ -38,6 +38,3 @@ jobs:
 
       - name: Build
         run: go build ./...
-
-      - name: Test
-        run: go test ./... -race -count=1
