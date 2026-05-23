@@ -21,7 +21,7 @@ func Connect(cfg *config.Config) *mongo.Client {
 	}
 
 	if err = client.Ping(ctx, nil); err != nil {
-		log.Fatalf("Failed to ping MongoDB: %v", err)
+		log.Fatalf("mongo: ping failed: %v", err)
 	}
 
 	log.Println("Connected to MongoDB successfully")
