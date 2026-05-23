@@ -240,6 +240,18 @@ This creates a set of employees across all four roles along with salary componen
 
 ---
 
+## Contributing
+
+Pull requests are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md) for the workflow and code style.
+
+---
+
+## Security
+
+Found a vulnerability? Please do **not** open a public issue. See [SECURITY.md](SECURITY.md) for the disclosure process.
+
+---
+
 ## License
 
-MIT — [utachicodes](https://github.com/utachicodes)
+Released under the [MIT License](LICENSE).
