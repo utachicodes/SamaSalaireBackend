@@ -17,7 +17,7 @@ func Connect(cfg *config.Config) *mongo.Client {
 
 	client, err := mongo.Connect(options.Client().ApplyURI(cfg.MongoURI))
 	if err != nil {
-		log.Fatalf("Failed to connect to MongoDB: %v", err)
+		log.Fatalf("mongo: connect failed: %v", err)
 	}
 
 	if err = client.Ping(ctx, nil); err != nil {
