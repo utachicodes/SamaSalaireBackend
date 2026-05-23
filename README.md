@@ -224,15 +224,17 @@ A payroll period progresses through three states: `draft` → `running` → `fin
 
 ### Leave
 
-| Method | Endpoint                          | Access                   | Description               |
-|--------|-----------------------------------|--------------------------|---------------------------|
-| GET    | `/leave-types`                    | Auth                     | List leave types          |
-| POST   | `/leave-types`                    | admin                    | Create leave type         |
-| PUT    | `/leave-types/:id`                | admin                    | Update leave type         |
-| GET    | `/leave-balances/:employeeId`     | Auth                     | Get leave balance         |
-| GET    | `/leave-requests`                 | Auth                     | List leave requests       |
-| POST   | `/leave-requests`                 | Auth                     | Submit a leave request    |
-| PUT    | `/leave-requests/:id/decide`      | admin, hr, manager       | Approve or reject         |
+Leave requests follow a `pending` → `approved` | `rejected` workflow. Approvers leave a decision note that is captured in the audit log.
+
+| Method | Endpoint                          | Access                   | Description                  |
+|--------|-----------------------------------|--------------------------|------------------------------|
+| GET    | `/leave-types`                    | Auth                     | List leave types             |
+| POST   | `/leave-types`                    | admin                    | Create a leave type          |
+| PUT    | `/leave-types/:id`                | admin                    | Update a leave type          |
+| GET    | `/leave-balances/:employeeId`     | Auth                     | Get an employee's balance    |
+| GET    | `/leave-requests`                 | Auth                     | List leave requests          |
+| POST   | `/leave-requests`                 | Auth                     | Submit a leave request       |
+| PUT    | `/leave-requests/:id/decide`      | admin, hr, manager       | Approve or reject a request  |
 
 ### Reports
 
