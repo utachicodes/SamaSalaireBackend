@@ -236,6 +236,8 @@ A payroll period progresses through three states: `draft` → `running` → `fin
 
 ### Reports
 
+Aggregated views over payroll and leave data, scoped by date range via query parameters.
+
 | Method | Endpoint                     | Access     | Description             |
 |--------|------------------------------|------------|-------------------------|
 | GET    | `/reports/payroll-summary`   | admin, hr  | Payroll summary report  |
