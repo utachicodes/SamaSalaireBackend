@@ -105,7 +105,7 @@ Or, with the Makefile:
 make run
 ```
 
-The API starts at `http://localhost:8080`.
+The API starts at `http://localhost:8080`. The port is configurable via the `PORT` environment variable.
 
 ```bash
 curl http://localhost:8080/health
