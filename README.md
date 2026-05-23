@@ -33,6 +33,7 @@ SamaSalaire is a REST API for managing employee payroll, leave, and HR operation
 - [Docker](#docker)
 - [Testing](#testing)
 - [Seeding](#seeding)
+- [Changelog](CHANGELOG.md)
 - [Contributing](#contributing)
 - [Security](#security)
 - [License](#license)
