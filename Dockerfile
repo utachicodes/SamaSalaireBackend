@@ -31,7 +31,7 @@ HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
 ENV PORT=8080 \
     MONGODB_URI=mongodb://mongo:27017 \
     DB_NAME=samasalaire \
-    JWT_SECRET=change-me-in-production \
     JWT_EXPIRY_HOURS=24
+# JWT_SECRET intentionally not set — supply it at runtime.
 
 ENTRYPOINT ["./server"]
