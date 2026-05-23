@@ -25,7 +25,7 @@ var (
 func Load() *Config {
 	once.Do(func() {
 		if err := godotenv.Load(); err != nil {
-			log.Println("No .env file found, reading from environment")
+			log.Println("config: no .env file found; reading configuration from process environment")
 		}
 
 		expiryHours, err := strconv.Atoi(getEnv("JWT_EXPIRY_HOURS", "24"))
