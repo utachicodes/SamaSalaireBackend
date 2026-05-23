@@ -189,13 +189,13 @@ Content-Type: application/json
 
 ### Employees
 
-| Method | Endpoint           | Access                  | Description         |
-|--------|--------------------|-------------------------|---------------------|
-| GET    | `/employees`       | admin, hr, manager      | List all employees  |
-| POST   | `/employees`       | admin, hr               | Create employee     |
-| GET    | `/employees/:id`   | Auth                    | Get employee by ID  |
-| PUT    | `/employees/:id`   | admin, hr               | Update employee     |
-| DELETE | `/employees/:id`   | admin                   | Delete employee     |
+| Method | Endpoint           | Access                  | Description          |
+|--------|--------------------|-------------------------|----------------------|
+| GET    | `/employees`       | admin, hr, manager      | List employees       |
+| POST   | `/employees`       | admin, hr               | Create an employee   |
+| GET    | `/employees/:id`   | Auth                    | Fetch employee by ID |
+| PUT    | `/employees/:id`   | admin, hr               | Update an employee   |
+| DELETE | `/employees/:id`   | admin                   | Delete an employee   |
 
 ### Salary Components
 
