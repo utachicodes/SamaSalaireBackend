@@ -15,7 +15,7 @@
 
 ---
 
-SamaSalaire is a REST API for managing employee payroll, leave, and HR operations. Built with Go and Gin, it features JWT authentication, role-based access control, a full audit trail on every mutating action, and a clean layered architecture.
+SamaSalaire is a REST API for managing employee payroll, leave, and HR operations. Built with Go and Gin, it ships with JWT authentication, role-based access control, an immutable audit trail on every mutating request, and a layered architecture that keeps handlers, services, and data access cleanly separated.
 
 ---
 
