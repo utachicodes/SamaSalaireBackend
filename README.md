@@ -245,7 +245,7 @@ Use this endpoint for liveness probes — it does not touch the database.
 docker build -t samasalaire-backend .
 
 # Run
-docker run -p 8080:8080 \
+docker run --rm -p 8080:8080 \
   -e MONGODB_URI=mongodb://host.docker.internal:27017 \
   -e JWT_SECRET=your-secret-here \
   samasalaire-backend
